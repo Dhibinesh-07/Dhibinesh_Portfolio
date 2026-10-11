@@ -21,6 +21,7 @@ export const profile = {
   links: {
     linkedin: 'https://www.linkedin.com/in/dhibinesh-p-d-babb95248/',
     github: 'https://github.com/Dhibinesh-07',
+    instagram: 'https://www.instagram.com/dhibin_07_/',
   },
   resumePdf: '/assets/Dhibinesh_Resume.pdf',
   hasResumePdf: false, // Resume coming soon state until official PDF is provided

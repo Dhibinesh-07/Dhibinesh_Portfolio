@@ -116,6 +116,10 @@ export function ResumeSheet() {
             <a href={profile.links.github} target="_blank" rel="noreferrer" className="hover:text-bone">
               GitHub ↗
             </a>
+            {' · '}
+            <a href={profile.links.instagram} target="_blank" rel="noreferrer" className="hover:text-bone">
+              Instagram ↗
+            </a>
           </div>
         </div>
       </header>
