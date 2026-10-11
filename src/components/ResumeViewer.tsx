@@ -109,15 +109,15 @@ export function ResumeSheet() {
           </a>
           <span className="block text-smoke">{profile.location}</span>
           <div className="mt-1">
-            <a href={profile.links.linkedin} target="_blank" rel="noreferrer" className="hover:text-bone">
+            <a href={profile.links.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-bone">
               LinkedIn ↗
             </a>
             {' · '}
-            <a href={profile.links.github} target="_blank" rel="noreferrer" className="hover:text-bone">
+            <a href={profile.links.github} target="_blank" rel="noopener noreferrer" className="hover:text-bone">
               GitHub ↗
             </a>
             {' · '}
-            <a href={profile.links.instagram} target="_blank" rel="noreferrer" className="hover:text-bone">
+            <a href={profile.links.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-bone">
               Instagram ↗
             </a>
           </div>

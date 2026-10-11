@@ -93,29 +93,29 @@ export default function ProjectModal({ project, onClose, onSwitch }: { project: 
 
             {(project.github || project.liveDemo) && (
               <motion.div variants={block} className="mt-6 flex flex-wrap gap-3">
-                {project.github && (
-                  <Magnetic>
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noreferrer"
-                      data-cursor="link"
-                      className="flex min-h-12 items-center gap-2 rounded-md bg-bone px-6 text-[15px] font-bold text-ink transition hover:bg-white"
-                    >
-                      GitHub ↗
-                    </a>
-                  </Magnetic>
-                )}
                 {project.liveDemo && (
                   <Magnetic>
                     <a
                       href={project.liveDemo}
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       data-cursor="link"
-                      className="glass flex min-h-12 items-center gap-2 rounded-md px-6 text-[15px] font-semibold text-bone transition hover:bg-white/15"
+                      className="flex min-h-12 items-center gap-2 rounded-md bg-crimson px-7 text-[15px] font-bold text-white shadow-[0_0_30px_rgba(229,19,43,0.45)] transition hover:bg-crimson-2"
                     >
-                      Live Demo ↗
+                      <span>▶</span> Live Demo ↗
+                    </a>
+                  </Magnetic>
+                )}
+                {project.github && (
+                  <Magnetic>
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      data-cursor="link"
+                      className="glass flex min-h-12 items-center gap-2 rounded-md px-6 text-[15px] font-semibold text-bone transition hover:border-bone hover:bg-white/15"
+                    >
+                      GitHub ↗
                     </a>
                   </Magnetic>
                 )}

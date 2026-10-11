@@ -23,7 +23,7 @@ function Intro() {
       </p>
       <RevealText as="h2" text="ORIGINALS" className="font-display text-[clamp(3.5rem,9vw,8rem)] leading-[0.85] text-bone" />
       <p className="mt-4 max-w-sm text-[15px] leading-relaxed text-mist">
-        Featured engineering productions — MindMate AI companion, Clothing E-Commerce, and AgriBot. Open any title for the full architecture.
+        Featured engineering productions — MindMate AI companion, Clothing E-Commerce, and Agri Helper. Open any title for the full architecture.
       </p>
       <p className="mt-6 hidden text-xs tracking-[0.24em] text-smoke lg:block">SCROLL TO BROWSE →</p>
     </div>
@@ -35,7 +35,7 @@ function Outro() {
     <a
       href={profile.links.github}
       target="_blank"
-      rel="noreferrer"
+      rel="noopener noreferrer"
       data-cursor="link"
       className="group flex aspect-[3/4] w-[70vw] shrink-0 snap-start flex-col items-center justify-center gap-4 rounded-2xl border border-dashed border-white/15 text-center transition hover:border-crimson-2/60 sm:w-[44vw] lg:aspect-auto lg:h-[66vh] lg:w-[24vw]"
     >

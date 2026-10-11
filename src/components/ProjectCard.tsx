@@ -52,16 +52,30 @@ export default function ProjectCard({ project, index, onOpen }: { project: Proje
                 </span>
               ))}
             </div>
-            <div className="mt-5 flex flex-wrap items-center gap-3">
+            <div className="mt-5 flex flex-wrap items-center gap-2.5">
               <span className="flex min-h-11 items-center gap-2 rounded-md bg-bone px-5 text-sm font-bold text-ink transition group-hover:bg-white">▶ View Project</span>
+              {project.liveDemo && (
+                <a
+                  href={project.liveDemo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-cursor="link"
+                  onClick={(e) => e.stopPropagation()}
+                  aria-label={`Live Demo for ${project.title} (opens in new tab)`}
+                  className="flex min-h-11 items-center gap-2 rounded-md border border-crimson/50 bg-crimson/25 px-4 text-sm font-semibold text-white backdrop-blur transition hover:border-crimson hover:bg-crimson/40"
+                >
+                  Live Demo ↗
+                </a>
+              )}
               {project.github && (
                 <a
                   href={project.github}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   data-cursor="link"
                   onClick={(e) => e.stopPropagation()}
-                  className="flex min-h-11 items-center gap-2 rounded-md border border-white/25 bg-black/30 px-4 text-sm font-semibold text-bone backdrop-blur transition hover:border-bone"
+                  aria-label={`GitHub repository for ${project.title} (opens in new tab)`}
+                  className="flex min-h-11 items-center gap-2 rounded-md border border-white/25 bg-black/40 px-4 text-sm font-semibold text-bone backdrop-blur transition hover:border-bone hover:bg-white/10"
                 >
                   GitHub ↗
                 </a>

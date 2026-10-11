@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { profile } from '../data/portfolio';
 import { useScrollLock } from '../hooks/smoothScroll';
@@ -10,11 +10,17 @@ import { ResumeSheet } from './ResumeViewer';
 export default function ResumeModal({ onClose }: { onClose: () => void }) {
   useScrollLock(true);
   const small = useMedia('(max-width: 767px)');
+  const closeBtn = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
+    const prevFocus = document.activeElement as HTMLElement | null;
+    closeBtn.current?.focus({ preventScroll: true });
     const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose();
     window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
+    return () => {
+      window.removeEventListener('keydown', onKey);
+      prevFocus?.focus?.({ preventScroll: true });
+    };
   }, [onClose]);
 
   return (
@@ -44,6 +50,7 @@ export default function ResumeModal({ onClose }: { onClose: () => void }) {
             </span>
           )}
           <button
+            ref={closeBtn}
             type="button"
             onClick={onClose}
             aria-label="Close resume"

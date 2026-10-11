@@ -32,7 +32,7 @@ The static site is written to `dist/` and can be deployed as-is to Vercel, Netli
 | Section / Content | Configured in |
 | --- | --- |
 | Name, headline, email, LinkedIn, GitHub, Instagram | `profile` |
-| Projects (MindMate AI, Clothing E-Commerce, AgriBot) | `projects` |
+| Projects (MindMate AI, Clothing E-Commerce, Agri Helper) | `projects` |
 | Education & Internships | `education`, `experience` |
 | Achievements & Certifications | `achievements`, `certifications` |
 | Technical Skills & Descriptions | `skillCategories`, `skillEvidence` |

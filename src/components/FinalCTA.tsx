@@ -65,7 +65,7 @@ export default function FinalCTA({ onReplay }: { onReplay: () => void }) {
               <a
                 href={c.href}
                 target={c.href.startsWith('http') ? '_blank' : undefined}
-                rel={c.href.startsWith('http') ? 'noreferrer' : undefined}
+                rel={c.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                 data-cursor={c.cursor}
                 className={`flex min-h-12 items-center gap-2 rounded-full px-7 text-sm font-bold tracking-[0.12em] transition ${
                   c.primary ? 'bg-crimson text-white shadow-[0_0_50px_rgba(229,19,43,0.5)] hover:bg-crimson-2' : 'border border-white/25 text-bone hover:border-bone hover:bg-white/10'

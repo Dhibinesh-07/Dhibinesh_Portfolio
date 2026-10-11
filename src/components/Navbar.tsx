@@ -46,6 +46,18 @@ export default function Navbar({ order, profileId, onSwitch }: { order: SectionI
     return () => window.removeEventListener('pointerdown', close);
   }, [menu]);
 
+  useEffect(() => {
+    if (!menu && !mobileNav) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setMenu(false);
+        setMobileNav(false);
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [menu, mobileNav]);
+
   const go = (id: string) => {
     setMobileNav(false);
     scrollTo(`#${id}`, { offset: id === 'top' ? 0 : -64 });
